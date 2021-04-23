@@ -49,8 +49,8 @@ class LoginFragment : Fragment() {
         goMoviesButton.setOnClickListener {
             validateConnection(
                 User(
-                    "luis",
-                    "1234567"
+                    "Admin",
+                    "Password*123"
                 )
             )
         }
