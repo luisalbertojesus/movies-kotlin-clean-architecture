@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_login"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.moviescleanarchitecture.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+
+        <action
+            android:id="@+id/action_loginFragment_to_movieFragment"
+            app:destination="@id/movieFragment"
+            app:enterAnim="@anim/anim_push_left_in"
+            app:exitAnim="@anim/anim_push_left_out"
+            app:popEnterAnim="@anim/anim_push_right_in"
+            app:popExitAnim="@anim/anim_push_right_out" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/movieFragment"
+        android:name="com.example.moviescleanarchitecture.movie.MovieFragment"
+        android:label="fragment_movie"
+        tools:layout="@layout/fragment_movie" />
+
+</navigation>
